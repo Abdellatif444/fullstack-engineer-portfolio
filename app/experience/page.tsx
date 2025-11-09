@@ -119,45 +119,52 @@ const education = [
 
 const certifications = [
   {
+    title: 'AWS Educate Machine Learning Foundations',
+    issuer: 'Amazon Web Services (AWS)',
+    date: 'Avril 2025',
+    credentialId: 'https://www.credly.com/badges/98ef4c16-0fbe-412c-b09f-fda86e5ecda4/public_url',
+    description: 'Formation sur les fondamentaux du Machine Learning avec AWS.'
+  },
+  {
     title: 'Cloud Computing Fundamentals',
     issuer: 'IBM SkillsBuild',
     date: 'Avril 2025',
-    credentialId: '#',
+    credentialId: 'https://www.credly.com/badges/f2276716-9643-444a-a95d-f177fd327678/public_url',
     description: 'Formation sur les fondamentaux du Cloud Computing.'
-  },
-  {
-    title: 'Python (Basic)',
-    issuer: 'HackerRank',
-    date: 'Avril 2025',
-    credentialId: '#',
-    description: 'Certification Python niveau basique.'
   },
   {
     title: 'Introduction à Docker',
     issuer: 'DataScientest',
     date: 'Mars 2025',
-    credentialId: '#',
+    credentialId: 'https://app.datascientist.fr/certificat/1GOIXVY3WRVSN',
     description: 'Formation à la conteneurisation avec Docker.'
+  },
+  {
+    title: 'Python (Basic)',
+    issuer: 'HackerRank',
+    date: 'Mars 2025',
+    credentialId: 'https://www.hackerrank.com/certificates/4d65d1a4c0fd',
+    description: 'Certification Python niveau basique.'
   },
   {
     title: 'Cassandra: Architecture | Deployment | Performance Monitoring',
     issuer: 'EDUCBA',
     date: 'Février 2025',
-    credentialId: '#',
+    credentialId: 'https://www.udemy.com/certificate/UC-82497744-2801-4255-b170-64dce5070b26/',
     description: 'Formation sur l\'architecture et le déploiement de Cassandra.'
   },
   {
     title: 'Programming Foundations Fundamentals',
     issuer: 'LinkedIn Learning',
     date: 'Mai 2024',
-    credentialId: '#',
+    credentialId: 'https://lnkd.in/e9VXhd48',
     description: 'Fondamentaux de la programmation.'
   },
   {
     title: 'Scrum Foundation Professional Certification (SFPC)',
     issuer: 'CertiProf',
     date: 'Mai 2024',
-    credentialId: '#',
+    credentialId: '/certificates/scrum-sfpc.pdf',
     description: 'Certification professionnelle Scrum Foundation.'
   }
 ];
@@ -411,18 +418,28 @@ export default function ExperiencePage() {
                                   {cert.date}
                                 </div>
                               </div>
-                              <Button variant="outline" size="sm">
-                                <ExternalLink className="w-4 h-4" />
-                              </Button>
+                              {(cert.credentialId.startsWith('http') || cert.credentialId.startsWith('/')) ? (
+                                <Button variant="outline" size="sm" asChild>
+                                  <Link href={cert.credentialId} target="_blank" rel="noopener noreferrer">
+                                    <ExternalLink className="w-4 h-4" />
+                                  </Link>
+                                </Button>
+                              ) : (
+                                <Button variant="outline" size="sm" disabled>
+                                  <ExternalLink className="w-4 h-4" />
+                                </Button>
+                              )}
                             </div>
                           </CardHeader>
                           <CardContent>
                             <p className="text-sm text-muted-foreground mb-3">
                               {cert.description}
                             </p>
-                            <div className="text-xs text-muted-foreground">
-                              Credential ID: {cert.credentialId}
-                            </div>
+                            {(!cert.credentialId.startsWith('http') && !cert.credentialId.startsWith('/')) && (
+                              <div className="text-xs text-muted-foreground">
+                                Credential ID: {cert.credentialId}
+                              </div>
+                            )}
                           </CardContent>
                         </Card>
                       ))}
@@ -517,7 +534,7 @@ export default function ExperiencePage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
                   <Link href="/contact">
-                    Discutons de Votre Projet
+                    Discutons de Mon Projet
                   </Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>

@@ -121,13 +121,13 @@ const skills = {
 
 
 const certifications = [
-  'AWS Educate Machine Learning Foundations — Amazon Web Services (AWS), avril 2025',
-  'Cloud Computing Fundamentals — IBM SkillsBuild, avril 2025',
-  'Python (Basic) — HackerRank, avril 2025',
-  'Introduction à Docker — DataScientest, mars 2025',
-  'Cassandra: Architecture | Deployment | Performance Monitoring — EDUCBA, février 2025',
-  'Programming Foundations Fundamentals — LinkedIn Learning, mai 2024',
-  'Scrum Foundation Professional Certification (SFPC) — CertiProf, mai 2024',
+  'AWS Educate Machine Learning Foundations — Amazon Web Services (AWS), avril 2025 — https://www.credly.com/badges/98ef4c16-0fbe-412c-b09f-fda86e5ecda4',
+  'Cloud Computing Fundamentals — IBM SkillsBuild, avril 2025 — https://www.credly.com/badges/f2276716-9643-444a-a95d-f177fd327678',
+  'Introduction à Docker — DataScientest, mars 2025 — ID: 1GOIXVY3WRVSN',
+  'Python (Basic) — HackerRank, mars 2025 — ID: 4D65D1A4C0FD',
+  'Cassandra: Architecture | Deployment | Performance Monitoring — EDUCBA, février 2025 — ID: UC-82497744-2801-4255-b170-64dce5070b26',
+  'Programming Foundations Fundamentals — LinkedIn Learning, mai 2024 — ID: 265632adfae7c7f7cb7bda3bc7931a899d5df7df2b667728ae032422844d330b',
+  'Scrum Foundation Professional Certification (SFPC) — CertiProf, mai 2024 — ID: 96682434',
 ]
 
 const achievements = [
