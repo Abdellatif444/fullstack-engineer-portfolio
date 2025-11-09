@@ -385,23 +385,22 @@ export default function ResumePage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Let&apos;s Connect
+              Discutons de Votre Projet
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Interested in working together? I&apos;d love to discuss how my skills and experience
-              can contribute to your next project.
+              À la recherche d'un stage PFE ? Je serais ravi d'échanger sur la manière dont mes compétences en développement Full-Stack peuvent contribuer à vos projets innovants.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white border-0 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
                 <Link href="/contact">
                   <Mail className="w-4 h-4 mr-2" />
-                  Send Message
+                  Contactez-moi
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" asChild className="border-4 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white hover:scale-110 transition-all duration-300 font-bold shadow-lg hover:shadow-xl">
                 <Link href="/projects">
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  View Portfolio
+                  Voir Mes Projets
                 </Link>
               </Button>
             </div>
