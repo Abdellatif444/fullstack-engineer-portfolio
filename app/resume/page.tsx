@@ -385,10 +385,10 @@ export default function ResumePage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Discutons de Votre Projet
+              Vous Recrutez un Stagiaire PFE ?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              À la recherche d'un stage PFE ? Je serais ravi d'échanger sur la manière dont mes compétences en développement Full-Stack peuvent contribuer à vos projets innovants.
+              Actuellement en recherche d'un stage PFE (janvier/février 2026), je serais ravi de mettre mes compétences en développement Full-Stack au service de vos projets innovants.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white border-0 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">
