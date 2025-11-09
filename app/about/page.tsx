@@ -1,6 +1,3 @@
-'use client'
-
-import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
@@ -21,64 +18,6 @@ import {
   Microscope
 } from 'lucide-react'
 
-// Metadata moved to layout.tsx or removed for client component
-
-// Carousel automatique pour les médias
-function MediaCarousel() {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  
-  const media = [
-    { type: 'video', src: '/about/a.mp4', duration: 10000 }, // 10 secondes pour la vidéo
-    { type: 'image', src: '/about/5927911.gif', duration: 5000 }, // 5 secondes
-    { type: 'image', src: '/about/télécharger.gif', duration: 5000 },
-    { type: 'image', src: '/about/télécharger1.jfif', duration: 5000 }
-  ]
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentIndex((prev) => (prev + 1) % media.length)
-    }, media[currentIndex].duration)
-
-    return () => clearTimeout(timer)
-  }, [currentIndex, media])
-
-  const current = media[currentIndex]
-
-  return (
-    <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-8">
-      {current.type === 'video' ? (
-        <video
-          key={currentIndex}
-          autoPlay
-          muted
-          playsInline
-          className="w-full h-auto rounded-lg shadow-2xl transition-opacity duration-500"
-          style={{
-            clipPath: 'inset(0 0 12% 0)',
-            transform: 'scale(1.14)',
-            transformOrigin: 'center'
-          }}
-        >
-          <source src={current.src} type="video/mp4" />
-        </video>
-      ) : (
-        <Image
-          key={currentIndex}
-          src={current.src}
-          alt="Media showcase"
-          width={800}
-          height={600}
-          className="w-full h-auto rounded-lg shadow-2xl transition-opacity duration-500 object-cover"
-          style={{
-            clipPath: 'inset(0 0 12% 0)',
-            transform: 'scale(1.14)',
-            transformOrigin: 'center'
-          }}
-        />
-      )}
-    </div>
-  )
-}
 
 const skills = [
   { category: 'Langages & Frameworks', items: ['Python', 'Java', 'C', 'C++', 'C#', 'JavaScript', 'Laravel', 'Spring Boot', 'Vue.js', 'React.js', 'Flutter'] },
@@ -191,7 +130,22 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative">
-                <MediaCarousel />
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-primary/20 to-primary/5 p-8">
+                  <video
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-auto rounded-lg shadow-2xl"
+                    style={{
+                      clipPath: 'inset(0 0 12% 0)',
+                      transform: 'scale(1.14)',
+                      transformOrigin: 'center'
+                    }}
+                  >
+                    <source src="/about/a.mp4" type="video/mp4" />
+                  </video>
+                </div>
                 {/* Floating Stats */}
                 <div className="absolute -bottom-6 -left-6 bg-card border rounded-lg p-4 shadow-lg">
                   <div className="flex items-center">
