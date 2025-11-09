@@ -63,7 +63,7 @@ export function Header() {
           >
             <Link href="/" className="flex items-center gap-3 group">
               <div className="relative">
-                <div className="relative h-9 w-9 rounded-full overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-cyan-400/25 group-hover:shadow-xl">
+                <div className="relative h-12 w-12 rounded-full overflow-hidden shadow-lg transition-all duration-300 group-hover:shadow-cyan-400/25 group-hover:shadow-xl">
                   <Image
                     src="/image_profil.jpg"
                     alt="Abdellatif GOURRI"
@@ -156,12 +156,12 @@ export function Header() {
                     className="flex items-center gap-3"
                     onClick={() => setIsOpen(false)}
                   >
-                    <div className="relative h-10 w-10 rounded-full overflow-hidden">
+                    <div className="relative h-12 w-12 rounded-full overflow-hidden">
                       <Image
                         src="/image_profil.jpg"
                         alt="Abdellatif GOURRI"
                         fill
-                        sizes="40px"
+                        sizes="48px"
                         className="object-cover"
                       />
                     </div>
