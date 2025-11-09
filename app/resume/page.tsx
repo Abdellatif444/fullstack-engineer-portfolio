@@ -18,7 +18,8 @@ import {
   Award,
   Code,
   Star,
-  ExternalLink
+  ExternalLink,
+  Download
 } from 'lucide-react'
 
 const personalInfo = {
@@ -196,9 +197,14 @@ export default function ResumePage() {
                 {/* Quick Stats removed per request to remove numbers */}
 
                 <div className="mt-6 flex justify-center gap-4 print:hidden">
-                  <Button size="sm" variant="outline" onClick={() => window.print()} className="text-xs">Print / PDF</Button>
-                  <Button size="sm" asChild className="text-xs">
-                    <Link href="/contact">Hire Me</Link>
+                  <Button size="sm" variant="outline" asChild className="text-xs">
+                    <Link href="/CV_GOURRI_ABDELLATIF.pdf" download>
+                      <Download className="w-3 h-3 mr-2" />
+                      Télécharger CV
+                    </Link>
+                  </Button>
+                  <Button size="sm" asChild className="text-xs bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700">
+                    <Link href="/contact">Stage PFE 2026</Link>
                   </Button>
                 </div>
               </header>
