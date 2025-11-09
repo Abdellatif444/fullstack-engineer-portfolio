@@ -1,0 +1,15 @@
+run = "npm run dev"
+hidden = [".config", ".next", "node_modules"]
+
+[nix]
+channel = "stable-22_11"
+
+[deployment]
+run = ["sh", "-c", "npm run build && npm run start"]
+deploymentTarget = "cloudrun"
+
+[languages.javascript]
+pattern = "**/*.{js,jsx,ts,tsx}"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
