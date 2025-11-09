@@ -97,11 +97,11 @@ export function CTABand() {
             >
               <Button 
                 size="lg" 
-                className="w-full sm:w-auto text-lg font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all duration-300"
+                className="w-full sm:w-auto text-lg font-semibold bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white border-0 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300"
                 asChild
               >
                 <Link href="/contact">
-                  Get in Touch <ArrowRight className="ml-2 h-5 w-5" />
+                  Contactez-moi <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </motion.div>
@@ -116,11 +116,11 @@ export function CTABand() {
             viewport={{ once: true }}
           >
             <p className="text-sm text-muted-foreground">
-              Have a quick question?{" "}
+              Une question rapide ?{" "}
               <Link href="mailto:gourri.abdellatif@gmail.com" className="text-primary underline hover:text-accent transition-colors">
-                Email me directly
+                Envoyez-moi un email
               </Link>{" "}
-              or connect on{" "}
+              ou connectez-vous sur{" "}
               <Link href="https://www.linkedin.com/in/abdellatif-gourri-989b7a1b8/" className="text-primary underline hover:text-accent transition-colors">
                 LinkedIn
               </Link>.
