@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function SplashScreen() {
   const [phase, setPhase] = useState<'gif' | 'blackout' | 'welcome' | 'fadeout'>('gif');
-  const welcomeText = "Bonjour sur mon portfolio !";
+  const welcomeText = "Bienvenue sur mon portfolio !";
   const [displayedText, setDisplayedText] = useState("");
   const [gifDuration, setGifDuration] = useState(4140); // Durée par défaut (4.14 secondes)
   // Nouveau fichier GIF pour forcer le rechargement complet (évite le cache Windsurf)
@@ -57,8 +57,8 @@ export default function SplashScreen() {
           let delay = 60; // Délai normal
           
           const currentText = welcomeText.slice(0, index);
-          if (currentText.endsWith("Bonjour")) {
-            delay = 400; // Pause après "Bonjour" (réflexion)
+          if (currentText.endsWith("Bienvenue")) {
+            delay = 400; // Pause après "Bienvenue" (réflexion)
           } else if (currentText.endsWith("sur")) {
             delay = 200; // Petite pause après "sur"
           }
