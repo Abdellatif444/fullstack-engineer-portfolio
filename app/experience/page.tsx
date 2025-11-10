@@ -172,24 +172,24 @@ const certifications = [
 
 const skills = {
   technical: [
-    { name: 'Laravel', level: 30 },
+    { name: 'HTML/CSS', level: 70 },
+    { name: 'MySQL/PostgreSQL', level: 65 },
     { name: 'Vue.js', level: 55 },
     { name: 'Spring Boot', level: 55 },
+    { name: 'Java', level: 55 },
     { name: 'Flutter', level: 50 },
     { name: 'Docker', level: 50 },
-    { name: 'MySQL/PostgreSQL', level: 65 },
-    { name: 'Java', level: 55 },
     { name: 'PHP', level: 40 },
     { name: 'JavaScript', level: 40 },
-    { name: 'HTML/CSS', level: 70 }
+    { name: 'Laravel', level: 30 }
   ],
   soft: [
-    { name: 'Résolution de problèmes', level: 50 },
-    { name: 'Communication', level: 65 },
-    { name: 'Leadership', level: 50 },
+    { name: 'Résolution de problèmes', level: 70 },
+    { name: 'Communication', level: 70 },
+    { name: 'Travail d\'équipe', level: 65 },
     { name: 'Gestion de projet', level: 60 },
-    { name: 'Travail d\'\u00e9quipe', level: 70 },
     { name: 'Adaptabilité', level: 60 },
+    { name: 'Leadership', level: 50 },
   ],
   additional: [
     'Agile/Scrum',
