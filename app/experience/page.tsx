@@ -249,26 +249,26 @@ export default function ExperiencePage() {
               <Tabs defaultValue="experience" className="w-full">
                 <div className="flex justify-center mb-12">
                   <TabsList className="grid w-full max-w-md grid-cols-4 gap-2 bg-transparent p-2">
-                    <TabsTrigger 
-                      value="experience" 
+                    <TabsTrigger
+                      value="experience"
                       className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-600 data-[state=active]:text-white data-[state=active]:border-orange-500 border-2 border-primary/20 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:text-white hover:border-orange-400 hover:scale-105 transition-all duration-200 rounded-lg px-4 py-3 font-semibold shadow-sm hover:shadow-lg"
                     >
                       Work
                     </TabsTrigger>
-                    <TabsTrigger 
-                      value="education" 
+                    <TabsTrigger
+                      value="education"
                       className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-600 data-[state=active]:text-white data-[state=active]:border-orange-500 border-2 border-primary/20 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:text-white hover:border-orange-400 hover:scale-105 transition-all duration-200 rounded-lg px-4 py-3 font-semibold shadow-sm hover:shadow-lg"
                     >
                       Education
                     </TabsTrigger>
-                    <TabsTrigger 
-                      value="certifications" 
+                    <TabsTrigger
+                      value="certifications"
                       className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-600 data-[state=active]:text-white data-[state=active]:border-orange-500 border-2 border-primary/20 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:text-white hover:border-orange-400 hover:scale-105 transition-all duration-200 rounded-lg px-4 py-3 font-semibold shadow-sm hover:shadow-lg"
                     >
                       Certs
                     </TabsTrigger>
-                    <TabsTrigger 
-                      value="skills" 
+                    <TabsTrigger
+                      value="skills"
                       className="data-[state=active]:bg-gradient-to-r data-[state=active]:from-orange-500 data-[state=active]:to-red-600 data-[state=active]:text-white data-[state=active]:border-orange-500 border-2 border-primary/20 hover:bg-gradient-to-r hover:from-orange-400 hover:to-red-500 hover:text-white hover:border-orange-400 hover:scale-105 transition-all duration-200 rounded-lg px-4 py-3 font-semibold shadow-sm hover:shadow-lg"
                     >
                       Skills

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 // Stack technique principal
-const techStack = ["Laravel", "Vue.js", "Spring Boot", "Flutter", "Docker", "PostgreSQL", "MySQL"];
+const techStack = ["Java", "Laravel", "Vue.js", "Spring Boot", "Flutter", "Docker", "PostgreSQL", "MySQL"];
 
 export function HeroSection() {
   return (
@@ -86,12 +86,11 @@ export function HeroSection() {
               </Button>
               <Button 
                 size="lg" 
-                variant="outline" 
                 asChild
-                className="border-4 border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white hover:scale-110 transition-all duration-300 font-bold shadow-lg hover:shadow-xl"
+                className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300 font-bold"
               >
                 <Link href="/resume">
-                  Télécharger mon CV <ArrowRight className="ml-2 h-5 w-5" />
+                  Voir le CV <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </motion.div>

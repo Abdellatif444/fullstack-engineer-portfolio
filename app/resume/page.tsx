@@ -121,13 +121,13 @@ const skills = {
 
 
 const certifications = [
-  'AWS Educate Machine Learning Foundations — Amazon Web Services (AWS), avril 2025 — https://www.credly.com/badges/98ef4c16-0fbe-412c-b09f-fda86e5ecda4',
-  'Cloud Computing Fundamentals — IBM SkillsBuild, avril 2025 — https://www.credly.com/badges/f2276716-9643-444a-a95d-f177fd327678',
-  'Introduction à Docker — DataScientest, mars 2025 — ID: 1GOIXVY3WRVSN',
-  'Python (Basic) — HackerRank, mars 2025 — ID: 4D65D1A4C0FD',
-  'Cassandra: Architecture | Deployment | Performance Monitoring — EDUCBA, février 2025 — ID: UC-82497744-2801-4255-b170-64dce5070b26',
-  'Programming Foundations Fundamentals — LinkedIn Learning, mai 2024 — ID: 265632adfae7c7f7cb7bda3bc7931a899d5df7df2b667728ae032422844d330b',
-  'Scrum Foundation Professional Certification (SFPC) — CertiProf, mai 2024 — ID: 96682434',
+  'AWS Educate Machine Learning Foundations — Amazon Web Services (AWS), avril 2025',
+  'Cloud Computing Fundamentals — IBM SkillsBuild, avril 2025',
+  'Introduction à Docker — DataScientest, mars 2025',
+  'Python (Basic) — HackerRank, mars 2025',
+  'Cassandra: Architecture | Deployment | Performance Monitoring — EDUCBA, février 2025',
+  'Programming Foundations Fundamentals — LinkedIn Learning, mai 2024',
+  'Scrum Foundation Professional Certification (SFPC) — CertiProf, mai 2024',
 ]
 
 const achievements = [
@@ -197,7 +197,7 @@ export default function ResumePage() {
                 {/* Quick Stats removed per request to remove numbers */}
 
                 <div className="mt-6 flex justify-center gap-4 print:hidden">
-                  <Button size="sm" variant="outline" asChild className="text-xs">
+                  <Button size="sm" asChild className="text-xs bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                     <Link href="/CV_GOURRI_ABDELLATIF.pdf" download>
                       <Download className="w-3 h-3 mr-2" />
                       Télécharger CV

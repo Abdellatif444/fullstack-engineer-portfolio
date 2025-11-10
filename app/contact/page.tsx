@@ -185,7 +185,7 @@ ${formData.message}
                 Développeur Full-Stack Passionné
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Élève-ingénieur en 3ᵉ année à l'EHTP, je me spécialise dans le développement Full-Stack avec Laravel, Vue.js, Spring Boot et Flutter. Je suis <strong>ouvert aux opportunités de stage PFE</strong> (janvier/février 2026) et aux <strong>projets freelance</strong>.
+                Élève-ingénieur en 3ᵉ année à l'EHTP, je me spécialise dans le développement Full-Stack avec Laravel, Vue.js, Spring Boot et Flutter. Je suis <strong>ouvert aux opportunités de stage PFE</strong> (janvier/février 2026).
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" /> Réponse sous 24h</Badge>
@@ -380,10 +380,6 @@ ${formData.message}
                         <div className="flex items-center justify-between">
                           <span>Stage PFE</span>
                           <Badge variant="default" className="text-xs bg-green-600">Recherche Active</Badge>
-                        </div>
-                        <div className="flex items-center justify-between">
-                          <span>Projets Freelance</span>
-                          <Badge variant="default" className="text-xs">Disponible</Badge>
                         </div>
                         <div className="flex items-center justify-between">
                           <span>Période Stage</span>
