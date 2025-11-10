@@ -77,8 +77,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <SplashScreen />
+          <Header />
           <PageTransition>
-            <Header />
             <main className="min-h-screen">
               {children}
             </main>

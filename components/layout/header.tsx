@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 const navItems = [
@@ -20,21 +20,22 @@ const navItems = [
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
   const pathname = usePathname();
-  const { scrollY } = useScroll();
-
-  const headerBackground = useTransform(
-    scrollY,
-    [0, 100],
-    ["rgba(16, 20, 24, 0.8)", "rgba(16, 20, 24, 0.95)"]
-  );
+  // Background & elevation are now handled via CSS classes to avoid hydration mismatch
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-    window.addEventListener("scroll", handleScroll);
+    const handleScroll = () => setIsScrolled(window.scrollY > 20);
+    // Set initial state based on current scroll to avoid visual jump
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    // Show header after splash screen (approximately 6 seconds)
+    const timer = setTimeout(() => setIsVisible(true), 6000);
+    return () => clearTimeout(timer);
   }, []);
 
   const isActive = (href: string) => {
@@ -42,16 +43,16 @@ export function Header() {
     return pathname.startsWith(href);
   };
 
+  if (!isVisible) return null;
+
   return (
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${isScrolled
-          ? "backdrop-blur-xl border-b border-white/10 shadow-2xl"
-          : "backdrop-blur-sm border-b border-white/5"
-        }`}
-      style={{ backgroundColor: headerBackground }}
-      initial={{ y: -100, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+      className={`fixed top-3 left-0 right-0 z-50 mx-4 rounded-2xl transition-all duration-500 ${
+        isScrolled
+          ? "bg-background/90 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_0_rgba(59,130,246,0.2),0_0_60px_0_rgba(59,130,246,0.1)]"
+          : "bg-background/70 backdrop-blur-md border border-white/10 shadow-[0_4px_16px_0_rgba(0,0,0,0.1)]"
+      }`}
+      initial={false}
     >
       <div className="container-max">
         <div className="flex h-16 items-center justify-between">
@@ -96,8 +97,8 @@ export function Header() {
                 <Link
                   href={item.href}
                   className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group ${isActive(item.href)
-                      ? "text-cyan-300"
-                      : "text-gray-300 hover:text-white"
+                    ? "text-cyan-300"
+                    : "text-gray-300 hover:text-white"
                     }`}
                 >
                   {item.label}
@@ -180,8 +181,8 @@ export function Header() {
                       href={item.href}
                       onClick={() => setIsOpen(false)}
                       className={`flex items-center p-3 rounded-xl font-medium transition-all duration-300 ${isActive(item.href)
-                          ? "bg-cyan-400/10 text-cyan-300 border border-cyan-400/20"
-                          : "text-gray-300 hover:text-white hover:bg-white/5"
+                        ? "bg-cyan-400/10 text-cyan-300 border border-cyan-400/20"
+                        : "text-gray-300 hover:text-white hover:bg-white/5"
                         }`}
                     >
                       {item.label}
@@ -202,8 +203,8 @@ export function Header() {
                         href={item.href}
                         onClick={() => setIsOpen(false)}
                         className={`flex items-center p-4 rounded-xl font-medium transition-all duration-500 group relative overflow-hidden ${isActive(item.href)
-                            ? "bg-gradient-to-r from-cyan-400/15 to-blue-500/10 text-cyan-300 border border-cyan-400/30 shadow-lg shadow-cyan-400/10"
-                            : "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-white/10 hover:to-white/5 border border-transparent hover:border-white/20"
+                          ? "bg-gradient-to-r from-cyan-400/15 to-blue-500/10 text-cyan-300 border border-cyan-400/30 shadow-lg shadow-cyan-400/10"
+                          : "text-gray-300 hover:text-white hover:bg-gradient-to-r hover:from-white/10 hover:to-white/5 border border-transparent hover:border-white/20"
                           }`}
                       >
                         {/* Shimmer effect */}

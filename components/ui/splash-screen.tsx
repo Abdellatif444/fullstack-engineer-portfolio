@@ -84,23 +84,20 @@ export default function SplashScreen() {
     };
   }, []);
 
-  if (phase === 'fadeout') {
-    return null;
-  }
-
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        key={phase}
-        initial={{ opacity: 1 }}
-        animate={{ opacity: phase === 'blackout' ? 0 : 1 }}
-        exit={{ opacity: 0 }}
-        transition={{
-          duration: phase === 'blackout' ? 0.15 : 0.5,
-          ease: "easeOut"
-        }}
-        className="fixed inset-0 z-[9999] bg-black"
-      >
+      {phase !== 'fadeout' && (
+        <motion.div
+          key={phase}
+          initial={{ opacity: 1 }}
+          animate={{ opacity: phase === 'blackout' ? 0 : 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            duration: phase === 'blackout' ? 0.15 : 0.8,
+            ease: "easeOut"
+          }}
+          className="fixed inset-0 z-[9999] bg-black"
+        >
         {/* Phase 1 & 2: GIF Animation plein écran */}
         {(phase === 'gif' || phase === 'blackout') && (
           <motion.div
@@ -169,6 +166,7 @@ export default function SplashScreen() {
           />
         )}
       </motion.div>
+      )}
     </AnimatePresence>
   );
 }
