@@ -2,7 +2,7 @@
 'use client'
 
 import Link from 'next/link'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { Separator } from '@/components/ui/separator'
@@ -153,6 +153,8 @@ const achievements = [
 
 
 export default function ResumePage() {
+  const [cvLang, setCvLang] = useState<'fr' | 'en'>('fr')
+
   useEffect(() => {
     document.title = 'CV | Abdellatif GOURRI - Développeur Full-Stack & Étudiant Ingénieur'
   }, [])
@@ -207,16 +209,44 @@ export default function ResumePage() {
 
                 {/* Quick Stats removed per request to remove numbers */}
 
-                <div className="mt-6 flex justify-center gap-4 print:hidden">
-                  <Button size="sm" asChild className="text-xs bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-                    <Link href="/CV_GOURRI_ABDELLATIF.pdf" download>
-                      <Download className="w-3 h-3 mr-2" />
-                      Télécharger CV
-                    </Link>
-                  </Button>
-                  <Button size="sm" asChild className="text-xs bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700">
-                    <Link href="/contact">Contactez-moi</Link>
-                  </Button>
+                {/* CV Language Selector */}
+                <div className="mt-6 flex flex-col items-center gap-4 print:hidden">
+                  {/* Language Toggle */}
+                  <div className="flex items-center gap-1 p-1 rounded-full bg-muted/50 border border-border/50 backdrop-blur-sm">
+                    <button
+                      onClick={() => setCvLang('fr')}
+                      className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                        cvLang === 'fr'
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
+                          : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      <span className="text-base">🇫🇷</span> Français
+                    </button>
+                    <button
+                      onClick={() => setCvLang('en')}
+                      className={`flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-300 ${
+                        cvLang === 'en'
+                          ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg scale-105'
+                          : 'text-muted-foreground hover:text-foreground'
+                      }`}
+                    >
+                      <span className="text-base">🇬🇧</span> English
+                    </button>
+                  </div>
+
+                  {/* Download + Contact Buttons */}
+                  <div className="flex gap-3">
+                    <Button size="sm" asChild className="text-xs bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                      <Link href={cvLang === 'fr' ? '/CV_Abdellatif_GOURRI_FR.pdf' : '/CV_Abdellatif_GOURRI_EN.pdf'} download>
+                        <Download className="w-3 h-3 mr-2" />
+                        {cvLang === 'fr' ? 'Télécharger CV (FR)' : 'Download CV (EN)'}
+                      </Link>
+                    </Button>
+                    <Button size="sm" asChild className="text-xs bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700">
+                      <Link href="/contact">Contactez-moi</Link>
+                    </Button>
+                  </div>
                 </div>
               </header>
 
