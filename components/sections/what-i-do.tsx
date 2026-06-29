@@ -8,14 +8,14 @@ import { motion } from "framer-motion";
 const services = [
     {
         icon: BrainCircuit,
-        title: "AI & Generative Models",
+        title: "Développement Full-Stack",
         description:
-            "Conducting advanced research on Large Language Models (LLMs), privacy-preserving AI, and generative systems. I focus on developing context-aware, ethical, and high-performing AI solutions.",
+            "Conception et développement d'applications web et mobiles complètes, du backend API REST jusqu'à l'interface utilisateur, avec une attention particulière à la performance et à l'expérience utilisateur.",
         features: [
-            "LLM Fine-Tuning & Evaluation",
-            "Privacy-Preserving Machine Learning",
-            "Natural Language Processing (NLP)",
-            "Generative AI Research & Applications",
+            "Backend Spring Boot (JWT, Kafka, PostGIS)",
+            "Frontend React/TypeScript & Vue.js",
+            "Applications mobiles Flutter/Dart",
+            "APIs REST sécurisées & documentées",
         ],
         color: "text-green-400",
         bgColor: "bg-green-400/10",
@@ -23,14 +23,14 @@ const services = [
     },
     {
         icon: ShieldCheck,
-        title: "Web Privacy & Data Protection",
+        title: "IA & Computer Vision",
         description:
-            "Designing systems to detect, analyze, and mitigate privacy risks in web environments. I focus on safeguarding sensitive data while ensuring compliance and user transparency.",
+            "Intégration de modèles d'intelligence artificielle dans des systèmes de production : détection temps réel, supervision HSE automatique, pipelines Python pour l'inférence.",
         features: [
-            "Ad & Tracker Detection",
-            "Network-Level & DOM Analysis",
-            "Privacy-Focused Data Pipelines",
-            "Data Protection & Compliance",
+            "Détection temps réel (RT-DETR / YOLO)",
+            "Services IA Python (FastAPI, OpenCV)",
+            "Supervision HSE automatisée",
+            "Pipeline inférence & traitement vidéo",
         ],
         color: "text-blue-400",
         bgColor: "bg-blue-400/10",
@@ -38,14 +38,14 @@ const services = [
     },
     {
         icon: Cloud,
-        title: "Data Engineering & Research Infrastructure",
+        title: "DevOps & Architecture Microservices",
         description:
-            "Building scalable data pipelines and processing workflows to support advanced AI research and analytics. I integrate batch and real-time data systems to enable reproducible and efficient experiments.",
+            "Conception d'architectures microservices containerisées et orchestration des environnements de développement et de production avec Docker Compose, MinIO et Kafka.",
         features: [
-            "ETL & Data Pipeline Design",
-            "Batch & Real-Time Workflows",
-            "Data Cleaning & Quality Assurance",
-            "Research-Ready Data Warehouses",
+            "Architecture microservices (Docker Compose)",
+            "Apache Kafka (messaging asynchrone)",
+            "Stockage objet MinIO",
+            "Méthodologie Scrum & GitHub Flow",
         ],
         color: "text-purple-400",
         bgColor: "bg-purple-400/10",
@@ -71,9 +71,9 @@ export function WhatIDo() {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         viewport={{ once: true }}
                     >
-                        My Research{" "}
+                        Mes Domaines{" "}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 animate-gradient">
-                            Expertise
+                            d'Expertise
                         </span>
                     </motion.h2>
                     <motion.p
@@ -83,7 +83,7 @@ export function WhatIDo() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         viewport={{ once: true }}
                     >
-                        I conduct advanced AI and data-driven research, focusing on privacy, ethical AI, and generative models, delivering reproducible results and cutting-edge solutions.
+                        Développement Full-Stack, IA intégrée et DevOps : je conçois des solutions complètes de l'API backend à l'interface utilisateur, avec des pipelines de production reproductibles.
                     </motion.p>
                 </motion.div>
 

@@ -19,7 +19,7 @@ export function Footer() {
               <span className="font-semibold text-foreground">Abdellatif GOURRI</span>
             </div>
             <p className="text-sm text-muted-foreground max-w-sm">
-              Élève-ingénieur en Génie Informatique à l'EHTP, passionné par le développement Full-Stack (Laravel, Vue.js, Spring Boot, Flutter, Docker).
+              Ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack (Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter, Docker).
             </p>
           </div>
 

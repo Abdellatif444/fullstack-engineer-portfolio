@@ -14,6 +14,21 @@ import { AnimatedBackground } from '@/components/3d/animated-background'
 // Note: Le metadata est géré par le layout parent car cette page est un Client Component ('use client')
 const projects = [
   {
+    id: 'site-safe-ai',
+    title: 'SiteSafe AI - Supervision HSE par Intelligence Artificielle',
+    description: 'Projet de Fin d\'Études (PFE) réalisé chez CID Développement. Système de supervision intelligente en temps réel sur les chantiers de construction pour la détection automatique du non-port des Équipements de Protection Individuelle (EPI).',
+    image: null,
+    imageGradient: 'from-rose-600 via-red-500 to-orange-500',
+    tags: ['React', 'TypeScript', 'Spring Boot', 'Python', 'Kafka', 'Docker', 'YOLO/RT-DETR', 'WebSockets', 'PostgreSQL', 'PostGIS', 'MinIO'],
+    categories: ['Full-Stack', 'Web'],
+    status: 'Privé',
+    timeline: '5 mois',
+    year: '2026',
+    client: 'CID Développement (PFE)',
+    featured: true,
+    links: [{ type: 'github', url: '#' }], // Privé
+  },
+  {
     id: 'pv-mpp-monitor',
     title: 'Supervision Photovoltaïque MPP (En cours)',
     description: 'Système de supervision en temps réel d\'un panneau photovoltaïque avec analyse du point de puissance maximale (MPP). Montage simulé sur Proteus (ESP32 + capteurs ACS712), affichage des courbes I-V et P-V, WebSocket temps réel, import/export CSV. Architecture dockerisée complète (FastAPI + React + PostgreSQL).',
@@ -151,7 +166,7 @@ const projects = [
   {
     id: 'fullstack-engineer-portfolio',
     title: 'Portfolio Professionnel Full-Stack',
-    description: 'Portfolio professionnel - Élève Ingénieur EHTP | Full-Stack & DevOps Engineer',
+    description: 'Portfolio professionnel - Ingénieur d\'État EHTP | Full-Stack & DevOps Engineer',
     image: null,
     imageGradient: 'from-cyan-500 to-blue-600',
     tags: ['TypeScript', 'Next.js', 'React', 'TailwindCSS'],
@@ -192,6 +207,81 @@ const projects = [
     client: 'Projet académique',
     featured: false,
     links: [{ type: 'github', url: '#' }], // Privé - pas de lien
+  },
+  {
+    id: 'kit-commun-hospitalier',
+    title: 'Kit Commun Hospitalier',
+    description: 'Architecture microservices de gestion hospitalière intégrant une brique Blockchain pour la sécurisation et la traçabilité des dossiers médicaux. Orchestration multi-conteneurs.',
+    image: null,
+    imageGradient: 'from-indigo-600 to-violet-700',
+    tags: ['Java', 'Spring Boot', 'Spring Cloud', 'Blockchain', 'Docker Compose', 'Microservices', 'Eureka', 'Gateway'],
+    categories: ['Full-Stack', 'Web'],
+    status: 'Public',
+    timeline: '3 mois',
+    year: '2025',
+    client: 'Projet académique',
+    featured: true,
+    links: [{ type: 'github', url: 'https://github.com/Abdellatif444/KitCommun-Hospital' }],
+  },
+  {
+    id: 'fpgrowth-recommender',
+    title: 'Système de Recommandation FP-Growth',
+    description: 'Système de recommandation basé sur l\'algorithme FP-Growth avec une architecture Flask, PostgreSQL et Docker Compose. Permet d\'analyser les transactions et d\'extraire les règles d\'association.',
+    image: null,
+    imageGradient: 'from-green-600 to-teal-700',
+    tags: ['Python', 'Flask', 'PostgreSQL', 'Docker Compose', 'FP-Growth', 'Machine Learning', 'JavaScript', 'HTML/CSS'],
+    categories: ['Full-Stack', 'Web'],
+    status: 'Public',
+    timeline: '1 mois',
+    year: '2024',
+    client: 'Projet académique',
+    featured: false,
+    links: [{ type: 'github', url: 'https://github.com/Abdellatif444/fpgrowth-recommender-system' }],
+  },
+  {
+    id: 'bigfive-personality-test',
+    title: 'Test de Personnalité Big Five (OCEAN)',
+    description: 'Application web interactive permettant d\'évaluer la personnalité basée sur le modèle psychologique Big Five (OCEAN). Construit avec une interface moderne et soignée.',
+    image: null,
+    imageGradient: 'from-rose-500 to-pink-600',
+    tags: ['Next.js', 'React', 'TypeScript', 'TailwindCSS', 'shadcn/ui'],
+    categories: ['Web'],
+    status: 'Public',
+    timeline: '2 semaines',
+    year: '2024',
+    client: 'Projet personnel',
+    featured: false,
+    links: [{ type: 'github', url: 'https://github.com/Abdellatif444/bigfive-personality-test' }],
+  },
+  {
+    id: 'rapport-docker-latex',
+    title: 'Compilation LaTeX avec Docker',
+    description: 'Projet d\'automatisation permettant de compiler automatiquement des rapports LaTeX dans un conteneur Docker, garantissant un environnement de compilation cohérent et reproductible.',
+    image: null,
+    imageGradient: 'from-slate-600 to-zinc-700',
+    tags: ['Python', 'Docker', 'LaTeX', 'Dockerfile', 'Shell', 'Gnuplot', 'Automation'],
+    categories: ['Full-Stack'],
+    status: 'Privé',
+    timeline: '1 mois',
+    year: '2024',
+    client: 'Projet personnel',
+    featured: false,
+    links: [{ type: 'github', url: '#' }], // Privé
+  },
+  {
+    id: 'powerpoint-automation',
+    title: 'PowerPoint Automation (SiteSafe AI)',
+    description: 'Système d\'automatisation de génération de présentations PowerPoint (notamment pour la soutenance PFE SiteSafe AI) avec OnlyOffice, Python et Docker Compose.',
+    image: null,
+    imageGradient: 'from-orange-600 to-red-700',
+    tags: ['Python', 'HTML', 'Docker Compose', 'OnlyOffice', 'Automation'],
+    categories: ['Full-Stack'],
+    status: 'Privé',
+    timeline: '3 semaines',
+    year: '2026',
+    client: 'Projet personnel',
+    featured: false,
+    links: [{ type: 'github', url: '#' }], // Privé
   },
 ]
 
@@ -488,10 +578,10 @@ export default function ProjectsPage() {
         <section className="py-16 bg-card">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vous Cherchez un Stagiaire PFE ?
+              Prêt à Rejoindre Votre Équipe ?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Discutons de comment je peux contribuer à vos projets avec mes compétences en développement Full-Stack et ma motivation à apprendre et innover.
+              Discutons de comment je peux contribuer à vos projets avec mes compétences en développement Full-Stack & DevOps et ma motivation à apprendre et innover.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg">

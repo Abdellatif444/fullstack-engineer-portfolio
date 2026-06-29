@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 // Points forts basés sur mon parcours et expériences
 const trustElements = [
     {
-        name: "Élève-Ingénieur EHTP",
+        name: "Ingénieur d'État EHTP",
         icon: GraduationCap,
         description:
-            "3ᵉ année Génie Informatique à l'École Hassania des Travaux Publics, solide formation en algorithmique, POO et architecture logicielle.",
+            "Diplômé en Génie Informatique à l'École Hassania des Travaux Publics (juin 2026), solide formation en algorithmique, POO et architecture logicielle.",
         color: "text-accent",
         bgColor: "bg-accent/10",
         borderColor: "border-accent/20",
@@ -17,7 +17,7 @@ const trustElements = [
     {
         name: "Expérience Full-Stack",
         icon: TrendingUp,
-        description: "Développement d'applications web et mobiles avec Laravel, Vue.js, Spring Boot et Flutter lors de stages professionnels réussis et projets académiques.",
+        description: "Développement d'applications web et mobiles avec Laravel, Vue.js, React/TypeScript, Spring Boot et Flutter lors de stages professionnels réussis et projets académiques.",
         color: "text-purple-400",
         bgColor: "bg-purple-400/10",
         borderColor: "border-purple-400/20",
@@ -35,7 +35,7 @@ const trustElements = [
         name: "Stages Professionnels",
         icon: Star,
         description:
-            "Expériences concrètes chez OPTIZAWORKS (gestion de stocks), OHSE CAPITAL (app HealthTech) et Marolet (optimisation web).",
+            "Expériences concrètes chez CID Développement (PFE SiteSafe AI), OPTIZAWORKS (gestion de stocks), OHSE CAPITAL (app HealthTech) et Marolet (optimisation web).",
         color: "text-yellow-400",
         bgColor: "bg-yellow-400/10",
         borderColor: "border-yellow-400/20",
@@ -101,8 +101,8 @@ export function TrustStrip() {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             viewport={{ once: true }}
                         >
-                            Élève-ingénieur passionné par le développement Full-Stack, je combine formation solide et expériences concrètes.
-                            À la recherche d'un stage PFE pour contribuer à des projets innovants et continuer à développer mes compétences.
+                            Ingénieur d'État passionné par le développement Full-Stack, je combine formation solide et expériences concrètes.
+                            Disponible immédiatement pour contribuer à des projets innovants et continuer à développer mes compétences.
                         </motion.p>
                     </div>
 

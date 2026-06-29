@@ -22,10 +22,10 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "Person",
             "name": "Abdellatif GOURRI",
-            "jobTitle": "Développeur Full-Stack & Étudiant Ingénieur",
+            "jobTitle": "Ingénieur d'État Full-Stack & DevOps",
             "url": "https://fullstack-engineer-portfolio.replit.app",
             "image": "/image_profil.jpg",
-            "description": "Portfolio d'Abdellatif GOURRI, élève-ingénieur en 3ᵉ année à l'EHTP, passionné par le développement Full-Stack. Compétences en Laravel, Vue.js, Spring Boot, Flutter et Docker. À la recherche d'un stage PFE (janvier/février 2026).",
+            "description": "Portfolio d'Abdellatif GOURRI, ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack (Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter, Docker, Kafka). Disponible immédiatement.",
             "email": "mailto:gourri.abdellatif@gmail.com",
             "sameAs": [
               "https://www.linkedin.com/in/abdellatif-gourri-989b7a1b8/",

@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 // Stack technique principal
-const techStack = ["Java", "Laravel", "Vue.js", "Spring Boot", "Flutter", "Docker", "PostgreSQL", "MySQL"];
+const techStack = ["Java", "Laravel", "Vue.js", "Spring Boot", "React/TypeScript", "Flutter", "Docker", "PostgreSQL", "MySQL", "Kafka"];
 
 export function HeroSection() {
   return (
@@ -39,7 +39,7 @@ export function HeroSection() {
             >
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                <span>Disponible pour stage PFE - Janvier/Février 2026</span>
+                <span>Disponible immédiatement — Ingénieur d'État diplômé EHTP (juin 2026)</span>
               </div>
             </Badge>
 
@@ -54,7 +54,7 @@ export function HeroSection() {
                   Bonjour, je suis Abdellatif GOURRI
                 </span>
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 animate-gradient">
-                  Développeur Full-Stack & Étudiant Ingénieur
+                  Ingénieur Full-Stack & Diplômé Ingénieur d'État
                 </span>
               </motion.h1>
               <motion.p
@@ -63,9 +63,9 @@ export function HeroSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
               >
-                Élève-ingénieur en 3ᵉ année à l'EHTP, passionné par la conception
+                Ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par la conception
                 d'applications web et mobiles performantes. Expérience en Laravel, Vue.js,
-                Spring Boot et Flutter avec Docker/Compose.
+                Spring Boot, React/TypeScript et Flutter avec Docker/Compose et IA intégrée.
               </motion.p>
             </div>
 

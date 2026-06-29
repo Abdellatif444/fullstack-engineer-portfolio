@@ -1,6 +1,6 @@
 # Abdellatif GOURRI - Portfolio Website
 
-Portfolio professionnel d'Abdellatif GOURRI, élève-ingénieur en 3e année du cycle Ingénieur en Génie Informatique à l'EHTP. Passionné par le développement Full-Stack avec Laravel, Vue.js, Spring Boot, Flutter et Docker. Construit avec Next.js 15, shadcn/ui, et un thème sombre personnalisé.
+Portfolio professionnel d'Abdellatif GOURRI, ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026). Passionné par le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter, Docker et Kafka. Construit avec Next.js 15, shadcn/ui, et un thème sombre personnalisé.
 
 ## 🚀 Live Demo
 

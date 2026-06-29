@@ -77,8 +77,8 @@ export function CTABand() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              À la recherche d'un stage PFE (janvier/février 2026), je souhaite mettre mes compétences en{" "}
-              <span className="text-foreground font-semibold">développement Full-Stack</span>{" "}
+              Disponible immédiatement, je souhaite mettre mes compétences en{" "}
+              <span className="text-foreground font-semibold">développement Full-Stack & DevOps</span>{" "}
               au service de projets innovants et contribuer activement à votre équipe.
             </motion.p>
           </motion.div>

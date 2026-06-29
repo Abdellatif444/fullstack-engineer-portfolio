@@ -19,18 +19,32 @@ import {
 // import { Description } from '@radix-ui/react-dialog'
 
 export const metadata: Metadata = {
-  title: 'Experience | Abdellatif GOURRI - Développeur Full-Stack & Étudiant Ingénieur',
-  description: 'Parcours professionnel et académique d\'Abdellatif GOURRI : stages en développement Full-Stack, formation EHTP, compétences en Laravel, Vue.js, Spring Boot, Flutter et Docker.',
+  title: 'Experience | Abdellatif GOURRI - Ingénieur d\'État Full-Stack & DevOps',
+  description: 'Parcours professionnel et académique d\'Abdellatif GOURRI : stages en développement Full-Stack & DevOps, formation EHTP, compétences en React/TypeScript, Spring Boot, Flutter, Laravel et Docker.',
 }
 
 const workExperience = [
   {
-    title: 'Stage d\'Ingénieur',
+    title: 'Stage PFE – Ingénieur Full-Stack',
+    company: 'CID Développement',
+    location: 'Casablanca, Maroc',
+    period: 'Fév – Juin 2026',
+    type: 'Stage PFE',
+    description: "SiteSafe AI — Plateforme intelligente de supervision HSE par Vision par Ordinateur.",
+    achievements: [
+      "Architecture microservices complète : backend Spring Boot (JWT, Kafka, PostGIS), frontend React/TypeScript (Vite), service IA Python (RT-DETR/YOLO), stockage MinIO",
+      "Détection temps réel des infractions EPI (casque, gilet, gants, chaussures de sécurité) ; gestion du cycle de vie des non-conformités avec workflow de validation et notifications WebSocket",
+      "Conteneurisation intégrale Docker, méthodologie Scrum (sprints)"
+    ],
+    technologies: ['Spring Boot', 'React', 'TypeScript', 'Python', 'RT-DETR', 'YOLO', 'Kafka', 'PostGIS', 'MinIO', 'Docker', 'WebSocket', 'JWT']
+  },
+  {
+    title: 'Stage d\'Ingénieur – Développeur Full-Stack',
     company: 'OPTIZAWORKS',
     location: 'Agadir, Maroc',
-    period: 'Sept 2025 - Présent',
+    period: 'Sept – Nov 2025',
     type: 'Stage',
-    description: "Développement d'un site web de gestion des stocks et des approvisionnements.",
+    description: "Développement d'un site web de gestion de stock et approvisionnements.",
     achievements: [
       "Conception et développement d'une application web de gestion des stocks et des approvisionnements",
       "Implémentation des fonctionnalités principales : gestion des articles, mouvements de stock, inventaire permanent et génération automatique de bons (réception, sortie, commande)",
@@ -76,12 +90,12 @@ const workExperience = [
 
 const education = [
   {
-    degree: 'Cycle Ingénieur en Génie Informatique',
+    degree: 'Ingénieur d\'État en Génie Informatique',
     school: 'École Hassania des Travaux Publics (EHTP)',
     location: 'Casablanca, Maroc',
     period: '2023 - 2026',
-    status: 'En cours (3ᵉ année)',
-    description: 'Formation d\'ingénieur en Génie Informatique avec spécialisation en développement Full-Stack, architecture logicielle et pratiques DevOps.',
+    status: 'Diplômé (juin 2026)',
+    description: 'Formation d\'ingénieur en Génie Informatique avec spécialisation en développement Full-Stack, architecture microservices, IA intégrée et pratiques DevOps.',
     achievements: [
       'Chef Design du Club Social de l\'EHTP (2024-2025)',
       'Membre actif du Club Geo IT (année 2023-2024)',
@@ -118,6 +132,20 @@ const education = [
 ]
 
 const certifications = [
+  {
+    title: 'Foundations of Project Management',
+    issuer: 'Google',
+    date: 'Juin 2026',
+    credentialId: 'https://www.coursera.org/account/accomplishments/records/Q9HHWSPNEZNH',
+    description: 'Formation aux fondamentaux de la gestion de projet selon la méthodologie Google.'
+  },
+  {
+    title: 'DevOps Prerequisite Course',
+    issuer: 'KodeKloud',
+    date: 'Mai 2026',
+    credentialId: 'https://www.coursera.org/account/accomplishments/records/VY039GAZ2PJA',
+    description: 'Formation aux prérequis DevOps : Linux, réseau, Docker, Git et scripting Shell.'
+  },
   {
     title: 'AWS Educate Machine Learning Foundations',
     issuer: 'Amazon Web Services (AWS)',
@@ -174,14 +202,19 @@ const skills = {
   technical: [
     { name: 'HTML/CSS', level: 70 },
     { name: 'MySQL/PostgreSQL', level: 65 },
-    { name: 'Vue.js', level: 55 },
     { name: 'Spring Boot', level: 55 },
     { name: 'Java', level: 55 },
+    { name: 'Vue.js', level: 55 },
+    { name: 'React/TypeScript', level: 50 },
     { name: 'Flutter', level: 50 },
     { name: 'Docker', level: 50 },
     { name: 'PHP', level: 40 },
     { name: 'JavaScript', level: 40 },
-    { name: 'Laravel', level: 30 }
+    { name: 'Python', level: 40 },
+    { name: 'Apache Kafka', level: 40 },
+    { name: 'MinIO', level: 40 },
+    { name: 'PostGIS', level: 40 },
+    { name: 'Laravel', level: 30 },
   ],
   soft: [
     { name: 'Résolution de problèmes', level: 70 },
@@ -201,7 +234,8 @@ const skills = {
     'SEO',
     'Performance Optimization',
     'Docker Compose',
-    'GanttProject'
+    'GanttProject',
+    'ClickUp'
   ]
 }
 
@@ -222,7 +256,7 @@ export default function ExperiencePage() {
                 Parcours Professionnel & Académique
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Élève-ingénieur en 3ᵉ année à l'EHTP, passionné par le développement Full-Stack.
+                Ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack.
                 De la formation académique solide aux expériences professionnelles concrètes, chaque étape a renforcé mes compétences techniques et ma capacité d'adaptation.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -529,7 +563,7 @@ export default function ExperiencePage() {
                 Prêt à Rejoindre Votre Équipe
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
-                Avec une formation solide en Génie Informatique, des expériences concrètes en développement Full-Stack et une forte motivation, je suis prêt à contribuer à vos projets innovants dans le cadre d'un stage PFE (janvier/février 2026).
+                Ingénieur d'État diplômé de l'EHTP (juin 2026), avec des expériences concrètes en développement Full-Stack et une forte motivation, je suis prêt à contribuer à vos projets innovants dès maintenant.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">

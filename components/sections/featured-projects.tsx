@@ -9,18 +9,18 @@ import { ProjectCard, ProjectData } from "@/components/ui/project-card";
 // Mes 3 meilleurs projets (Featured)
 const projects: ProjectData[] = [
     {
-        id: "pv-mpp-monitor",
-        title: "Supervision Photovoltaïque MPP (En cours)",
-        description: "Système de supervision en temps réel d'un panneau photovoltaïque avec analyse du point de puissance maximale (MPP). Montage simulé sur Proteus (ESP32 + capteurs ACS712), affichage des courbes I-V et P-V, WebSocket temps réel, import/export CSV. Architecture dockerisée complète (FastAPI + React + PostgreSQL).",
+        id: "gestion-stock-jakarta",
+        title: "Gestion de Stock - Jakarta EE",
+        description: "Application web de gestion de stock développée avec Jakarta EE 10 pour une entreprise de produits technologiques.",
         status: "Public",
-        tags: ["Python", "FastAPI", "React", "Vite", "TypeScript", "Docker", "PostgreSQL", "WebSocket", "Chart.js"],
+        tags: ["Java", "Jakarta EE", "JPA", "JSF"],
         icon: School,
-        color: "text-blue-400",
-        bgColor: "bg-blue-400/10",
-        borderColor: "border-blue-400/20",
+        color: "text-purple-400",
+        bgColor: "bg-purple-400/10",
+        borderColor: "border-purple-400/20",
+        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&auto=format&q=80",
         liveHref: "#",
-        githubHref: "https://github.com/Abdellatif444/pv-mpp-monitor", 
-        image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&h=400&fit=crop&auto=format&q=80",
+        githubHref: "https://github.com/Abdellatif444/-Gestion-de-Stock---Application-Jakarta-EE"
     },
     {
         id: "sgc-angular-django",
@@ -37,18 +37,18 @@ const projects: ProjectData[] = [
         githubHref: "https://github.com/Abdellatif444/SGC"
     },
     {
-        id: "gestion-stock-jakarta",
-        title: "Gestion de Stock - Jakarta EE",
-        description: "Application web de gestion de stock développée avec Jakarta EE 10 pour une entreprise de produits technologiques.",
-        status: "Public",
-        tags: ["Java", "Jakarta EE", "JPA", "JSF"],
+        id: "site-safe-ai",
+        title: "SiteSafe AI - Supervision HSE par IA",
+        description: "Système de supervision HSE intelligente en temps réel sur les chantiers. Détection automatique du non-port des EPI (casque, gilet, gants, chaussures) avec Spring Boot, React, Python IA, Kafka et Docker Compose.",
+        status: "Privé",
+        tags: ["React", "Spring Boot", "Python IA", "Kafka", "Docker", "WebSockets"],
         icon: Bot,
-        color: "text-purple-400",
-        bgColor: "bg-purple-400/10",
-        borderColor: "border-purple-400/20",
-        image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&h=400&fit=crop&auto=format&q=80",
+        color: "text-red-400",
+        bgColor: "bg-red-400/10",
+        borderColor: "border-red-400/20",
+        image: "https://images.unsplash.com/photo-1590069261209-f8e9b8642343?w=600&h=400&fit=crop&auto=format&q=80",
         liveHref: "#",
-        githubHref: "https://github.com/Abdellatif444/-Gestion-de-Stock---Application-Jakarta-EE"
+        githubHref: "#"
     },
 ];
 

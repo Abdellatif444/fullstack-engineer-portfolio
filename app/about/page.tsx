@@ -111,9 +111,9 @@ export default function AboutPage() {
                   Le Code & La Passion
                 </h1>
                 <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                  Élève-ingénieur en 3ᵉ année à l'EHTP, passionné par le développement Full-Stack et l'architecture logicielle.
-                  Je conçois des applications web et mobiles performantes avec Laravel, Vue.js, Spring Boot et Flutter,
-                  tout en maîtrisant les pratiques DevOps (Docker/Compose).
+                  Ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack et l'architecture logicielle.
+                  Je conçois des applications web et mobiles performantes avec Laravel, Vue.js, React/TypeScript, Spring Boot et Flutter,
+                  tout en maîtrisant les pratiques DevOps (Docker/Compose, Kafka).
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg">
@@ -181,7 +181,7 @@ export default function AboutPage() {
                 Mon parcours en informatique a débuté par une curiosité insatiable pour la technologie et une envie de comprendre son fonctionnement. Après un Baccalauréat en Sciences Mathématiques, j'ai intégré les Classes Préparatoires MPSI à Agadir, où j'ai développé des bases solides en mathématiques, physique et informatique.
               </p>
               <p className="text-lg leading-relaxed mb-6" style={{ textAlign: 'justify' }}>
-                Depuis mon entrée à l'École Hassania des Travaux Publics (EHTP) en 2023, je me passionne pour le développement Full-Stack et l'architecture logicielle. J'ai eu l'opportunité de travailler sur des projets concrets chez OPTIZAWORKS (gestion de stocks avec Laravel/Vue.js), OHSE CAPITAL (application HealthTech avec Spring Boot/Flutter) et Marolet (optimisation WordPress).
+                Depuis mon entrée à l'École Hassania des Travaux Publics (EHTP) en 2023, je me passionne pour le développement Full-Stack et l'architecture logicielle. J'ai eu l'opportunité de travailler sur des projets concrets chez CID Développement (PFE sur la supervision HSE intelligente avec Spring Boot, React, Python IA et Kafka), OPTIZAWORKS (gestion de stocks avec Laravel/Vue.js), OHSE CAPITAL (application HealthTech avec Spring Boot/Flutter) et Marolet (optimisation WordPress).
               </p>
               <p className="text-lg leading-relaxed mb-6" style={{ textAlign: 'justify' }}>
                 Mes expériences m'ont permis de maîtriser les technologies modernes comme Docker/Compose pour la conteneurisation, ainsi que les pratiques DevOps et Agile. J'ai également développé une expertise en conception d'API REST, gestion de bases de données (MySQL, PostgreSQL) et création d'interfaces responsives.

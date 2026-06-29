@@ -16,9 +16,9 @@ const fontSans = FontSans({
 });
 
 export const metadata: Metadata = {
-  title: "Abdellatif GOURRI — Développeur Full-Stack & Étudiant Ingénieur",
-  description: "Portfolio d'Abdellatif GOURRI, étudiant ingénieur en Génie Informatique à l'EHTP, passionné par le développement Full-Stack avec Laravel, Vue.js, Spring Boot, Flutter et Docker. Actuellement à la recherche d'un stage PFE débutant en janvier ou février 2026.",
-  keywords: ["Développeur Full-Stack", "Laravel", "Vue.js", "Spring Boot", "Flutter", "Docker", "EHTP", "Étudiant Ingénieur", "Stage PFE", "Next.js", "React", "PostgreSQL", "MySQL"],
+  title: "Abdellatif GOURRI — Ingénieur d'État Full-Stack & DevOps",
+  description: "Portfolio d'Abdellatif GOURRI, ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter et Docker. Disponible immédiatement.",
+  keywords: ["Développeur Full-Stack", "Laravel", "Vue.js", "Spring Boot", "React", "TypeScript", "Kafka", "Flutter", "Docker", "EHTP", "Ingénieur d'État", "DevOps", "Next.js", "PostgreSQL", "MySQL"],
   authors: [{ name: "Abdellatif GOURRI" }],
   creator: "Abdellatif GOURRI",
   metadataBase: new URL("https://abdellatif-gourri.me"),
@@ -27,21 +27,21 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://abdellatif-gourri.me",
     siteName: "Abdellatif GOURRI Portfolio",
-    title: "Abdellatif GOURRI — Développeur Full-Stack & Étudiant Ingénieur",
-    description: "Portfolio d'Abdellatif GOURRI, étudiant ingénieur en Génie Informatique à l'EHTP, passionné par le développement Full-Stack avec Laravel, Vue.js, Spring Boot, Flutter et Docker. Actuellement à la recherche d'un stage PFE débutant en janvier ou février 2026.",
+    title: "Abdellatif GOURRI — Ingénieur d'État Full-Stack & DevOps",
+    description: "Portfolio d'Abdellatif GOURRI, ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter et Docker. Disponible immédiatement.",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Abdellatif GOURRI — Développeur Full-Stack & Étudiant Ingénieur",
+        alt: "Abdellatif GOURRI — Ingénieur d'État Full-Stack & DevOps",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdellatif GOURRI — Développeur Full-Stack & Étudiant Ingénieur",
-    description: "Portfolio d'Abdellatif GOURRI, étudiant ingénieur en Génie Informatique à l'EHTP, passionné par le développement Full-Stack avec Laravel, Vue.js, Spring Boot, Flutter et Docker. Actuellement à la recherche d'un stage PFE débutant en janvier ou février 2026.",
+    title: "Abdellatif GOURRI — Ingénieur d'État Full-Stack & DevOps",
+    description: "Portfolio d'Abdellatif GOURRI, ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), passionné par le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter et Docker. Disponible immédiatement.",
     images: ["/og-image.jpg"],
   },
   robots: {

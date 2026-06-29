@@ -24,7 +24,7 @@ import {
 
 const personalInfo = {
   name: 'Abdellatif GOURRI',
-  title: 'Développeur Full-Stack & Étudiant Ingénieur',
+  title: 'Ingénieur d\'État Full-Stack & DevOps',
   email: 'gourri.abdellatif@gmail.com',
   phone: '+212 609 569 090',
   location: 'Casablanca, Rabat, Maroc',
@@ -32,14 +32,25 @@ const personalInfo = {
   github: 'github.com/Abdellatif444',
 }
 
-const professionalSummary = `Élève-ingénieur en 3ᵉ année du cycle Ingénieur en Génie Informatique à l'École Hassania des Travaux Publics (EHTP), passionné par la conception et le développement d'applications et de sites web, l'architecture logicielle et les pratiques DevOps (conteneurisation Docker/Compose). Mon parcours m'a permis d'acquérir des compétences solides en algorithmique, structures et bases de données, et en génie logiciel (POO), que je mets au service de projets ambitieux, orientés utilisateur, performants et évolutifs. Actuellement à la recherche d'un stage de fin d'études (PFE) débutant en janvier ou février 2026, je souhaite contribuer à des solutions innovantes et robustes au sein d'équipes exigeantes.`
+const professionalSummary = `Ingénieur d'État en Génie Informatique diplômé de l'École Hassania des Travaux Publics (EHTP, juin 2026), passionné par la conception et le développement d'applications et de sites web, l'architecture logicielle, les pratiques DevOps (conteneurisation Docker/Compose, Kafka) ainsi que le versionnement et la collaboration via GitHub. Mon parcours m'a permis d'acquérir des compétences solides en algorithmique, structures et bases de données, et en génie logiciel (POO), que je mets au service de projets ambitieux, orientés utilisateur, performants et évolutifs. À la recherche d'un premier poste d'ingénieur, je souhaite contribuer à des solutions innovantes et robustes au sein d'équipes exigeantes, tout en continuant à approfondir mes compétences techniques et professionnelles.`
 
 const experience = [
+  {
+    title: 'Stage PFE – Ingénieur Full-Stack',
+    company: 'CID Développement',
+    location: 'Casablanca, Maroc',
+    period: 'Fév – Juin 2026',
+    achievements: [
+      "Architecture microservices complète : backend Spring Boot (JWT, Kafka, PostGIS), frontend React/TypeScript (Vite), service IA Python (RT-DETR/YOLO), stockage MinIO",
+      "Détection temps réel des infractions EPI (casque, gilet, gants, chaussures de sécurité) ; gestion du cycle de vie des non-conformités avec workflow de validation et notifications WebSocket",
+      "Conteneurisation intégrale Docker, méthodologie Scrum (sprints)"
+    ],
+  },
   {
     title: 'Stage d\'Ingénieur - Développement Full-Stack',
     company: 'OPTIZAWORKS',
     location: 'Agadir, Maroc',
-    period: 'Sept 2025 - Présent',
+    period: 'Sept – Nov 2025',
     achievements: [
       "Conception et développement d'une application web de gestion des stocks et des approvisionnements",
       "Implémentation des fonctionnalités principales : gestion des articles, mouvements de stock, inventaire permanent et génération automatique de bons (réception, sortie, commande)",
@@ -79,13 +90,13 @@ const experience = [
 
 const education = [
   {
-    degree: 'Élève Ingénieur en Génie Informatique',
+    degree: 'Ingénieur d\'État en Génie Informatique (Diplômé)',
     school: 'École Hassania des Travaux Publics (EHTP)',
     location: 'Casablanca, Maroc',
     period: '2023 - 2026',
     details: [
-      'Spécialisation en développement d\'applications et architecture logicielle',
-      'Compétences en algorithmique, bases de données, génie logiciel (POO) et DevOps',
+      'Spécialisation en développement d\'applications et architecture microservices',
+      'Compétences en algorithmique, bases de données, génie logiciel (POO), IA et DevOps',
     ],
   },
   {
@@ -204,7 +215,7 @@ export default function ResumePage() {
                     </Link>
                   </Button>
                   <Button size="sm" asChild className="text-xs bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700">
-                    <Link href="/contact">Stage PFE 2026</Link>
+                    <Link href="/contact">Contactez-moi</Link>
                   </Button>
                 </div>
               </header>
@@ -391,10 +402,10 @@ export default function ResumePage() {
         <div className="container mx-auto px-4 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Vous Recrutez un Stagiaire PFE ?
+              Prêt à Rejoindre Votre Équipe ?
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
-              Actuellement en recherche d'un stage PFE (janvier/février 2026), je serais ravi de mettre mes compétences en développement Full-Stack au service de vos projets innovants.
+              Ingénieur d'État en Génie Informatique diplômé de l'EHTP, disponible immédiatement, je serais ravi de mettre mes compétences en développement Full-Stack et DevOps au service de vos projets innovants.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" className="bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white border-0 shadow-xl hover:shadow-2xl hover:scale-110 transition-all duration-300">

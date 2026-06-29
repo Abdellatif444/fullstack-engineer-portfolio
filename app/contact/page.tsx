@@ -44,7 +44,7 @@ const contactMethods = [
   {
     title: 'Localisation',
     description: 'Basé à Casablanca/Rabat, Maroc',
-    value: 'Disponible pour le stage sur site, à distance ou hybride',
+    value: 'Disponible immédiatement — sur site, à distance ou hybride',
     icon: MapPin,
     action: null,
     primary: false,
@@ -92,13 +92,13 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
       // Préparer les données pour l'envoi
-      const typeDemandeLabel = formData.projectType === 'stage' ? 'Opportunité de Stage PFE' : 
-                                formData.projectType === 'freelance' ? 'Idée d\'un Projet' :
-                                formData.projectType === 'collaboration' ? 'Proposition de Collaboration' : 'Question Générale'
-      
+      const typeDemandeLabel = formData.projectType === 'stage' ? 'Opportunité de Stage PFE' :
+        formData.projectType === 'freelance' ? 'Idée d\'un Projet' :
+          formData.projectType === 'collaboration' ? 'Proposition de Collaboration' : 'Question Générale'
+
       const formDataToSend = new FormData()
       formDataToSend.append('access_key', process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY || '')
       formDataToSend.append('name', formData.name)
@@ -122,21 +122,21 @@ Sujet          : ${formData.subject}
 ${formData.message}
 
 ═══════════════════════════════════════════════════════
-⏰ Reçu le : ${new Date().toLocaleString('fr-FR', { 
-  dateStyle: 'full', 
-  timeStyle: 'short' 
-})}
+⏰ Reçu le : ${new Date().toLocaleString('fr-FR', {
+        dateStyle: 'full',
+        timeStyle: 'short'
+      })}
 ═══════════════════════════════════════════════════════
       `.trim())
-      
+
       // Envoyer vers Web3Forms
       const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         body: formDataToSend
       })
-      
+
       const result = await response.json()
-      
+
       if (result.success) {
         setIsSubmitted(true)
       } else {
@@ -180,16 +180,16 @@ ${formData.message}
         <section className="py-16 lg:py-24">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge variant="outline" className="mb-4">Élève-ingénieur en Génie Informatique</Badge>
+              <Badge variant="outline" className="mb-4">Ingénieur d'État en Génie Informatique</Badge>
               <h1 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-                Développeur Full-Stack Passionné
+                Ingénieur Full-Stack Disponible
               </h1>
               <p className="text-xl text-muted-foreground mb-8">
-                Élève-ingénieur en 3ᵉ année à l'EHTP, je me spécialise dans le développement Full-Stack avec Laravel, Vue.js, Spring Boot et Flutter. Je suis <strong>ouvert aux opportunités de stage PFE</strong> (janvier/février 2026).
+                Ingénieur d'État en Génie Informatique diplômé de l'EHTP (juin 2026), je me spécialise dans le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot et Flutter. Je suis <strong>ouvert aux opportunités d'emploi</strong> dès maintenant.
               </p>
               <div className="flex flex-wrap justify-center gap-2">
                 <Badge variant="secondary"><Clock className="w-3 h-3 mr-1" /> Réponse sous 24h</Badge>
-                <Badge variant="secondary"><Calendar className="w-3 h-3 mr-1" /> Disponible pour Stage PFE</Badge>
+                <Badge variant="secondary"><Calendar className="w-3 h-3 mr-1" /> Disponible immédiatement</Badge>
                 <Badge variant="secondary"><MapPin className="w-3 h-3 mr-1" /> Casablanca/Rabat</Badge>
               </div>
             </div>
@@ -205,7 +205,7 @@ ${formData.message}
                     <CardHeader>
                       <CardTitle className="text-2xl">Envoyez-moi un Message</CardTitle>
                       <CardDescription>
-                        Une idée de projet, une question ou une opportunité de stage ? Remplissez le formulaire ci-dessous.
+                        Une idée de projet, une opportunité professionnelle ou une collaboration ? Remplissez le formulaire ci-dessous.
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -232,7 +232,7 @@ ${formData.message}
                                 onChange={handleInputChange}
                                 className="mr-3 w-4 h-4"
                               />
-                              <span className="text-sm font-medium">Opportunité de Stage PFE</span>
+                              <span className="text-sm font-medium">Opportunité d&apos;emploi</span>
                             </label>
                             <label className="flex items-center p-3 border-2 border-border rounded-lg cursor-pointer transition-all hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-600 hover:text-white hover:border-orange-500 hover:scale-105 hover:shadow-lg">
                               <input
@@ -300,8 +300,8 @@ ${formData.message}
                     <CardContent className="p-4 space-y-4">
                       {/* Freelancer Profile */}
                       <div className="flex items-center gap-4 p-3 rounded-lg border bg-card">
-                        <Image 
-                          src="/image_profil.jpg" 
+                        <Image
+                          src="/image_profil.jpg"
                           alt="Abdellatif GOURRI"
                           width={128}
                           height={128}
@@ -309,9 +309,9 @@ ${formData.message}
                         />
                         <div>
                           <h4 className="font-bold">Abdellatif GOURRI</h4>
-                          <p className="text-xs text-muted-foreground">Élève-ingénieur en Génie Informatique à l'EHTP</p>
+                          <p className="text-xs text-muted-foreground">Ingénieur d'État en Génie Informatique — EHTP (juin 2026)</p>
                           <p className="text-xs text-muted-foreground mt-1">
-                            Passionné par le développement Full-Stack (Laravel, Vue.js, Spring Boot, Flutter, Docker)
+                            Passionné par le développement Full-Stack (Laravel, Vue.js, React/TS, Spring Boot, Flutter, Docker, Kafka)
                           </p>
                         </div>
                       </div>
@@ -378,12 +378,12 @@ ${formData.message}
                     <CardContent>
                       <div className="space-y-3 text-sm">
                         <div className="flex items-center justify-between">
-                          <span>Stage PFE</span>
-                          <Badge variant="default" className="text-xs bg-green-600">Recherche Active</Badge>
+                          <span>Poste</span>
+                          <Badge variant="default" className="text-xs bg-green-600">Disponible immédiatement</Badge>
                         </div>
                         <div className="flex items-center justify-between">
-                          <span>Période Stage</span>
-                          <span className="text-muted-foreground">Janvier/Février 2026</span>
+                          <span>Type</span>
+                          <span className="text-muted-foreground">CDI / Freelance</span>
                         </div>
                       </div>
                     </CardContent>
@@ -402,19 +402,19 @@ ${formData.message}
                 <div>
                   <h3 className="font-semibold mb-2">Quelle est votre disponibilité actuelle ?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Je suis actuellement en recherche active d&apos;un stage PFE pour janvier/février 2026. Je suis également disponible pour des projets freelance. Je réponds généralement sous 24 heures.
+                    Je suis ingénieur d&apos;État diplômé de l&apos;EHTP depuis juin 2026 et disponible immédiatement. Je suis également disponible pour des projets freelance. Je réponds généralement sous 24 heures.
                   </p>
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-2">Quelle est la durée de votre stage PFE ?</h3>
+                  <h3 className="font-semibold mb-2">Quel type de poste recherchez-vous ?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Le stage PFE dure 6 mois (février-juillet 2026). Il s&apos;agit d&apos;un projet de fin d&apos;études qui permettra de mettre en pratique mes compétences et de contribuer concrètement à vos projets.
+                    Je suis à la recherche d&apos;un premier poste d&apos;ingénieur Full-Stack ou DevOps, en CDI, mission freelance, idéalement sur des projets ambitieux avec des équipes exigeantes, afin de mettre en pratique mes compétences et de contribuer concrètement à vos projets.
                   </p>
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Quelles technologies maîtrisez-vous ?</h3>
                   <p className="text-sm text-muted-foreground">
-                    Je maîtrise le développement Full-Stack avec Laravel, Vue.js, Spring Boot, Flutter et Docker. Je suis passionné par la création d&apos;applications web modernes et scalables.
+                    Je maîtrise le développement Full-Stack avec Laravel, Vue.js, React/TypeScript, Spring Boot, Flutter et Docker, ainsi que l&apos;intégration de services IA (Computer Vision, Kafka, MinIO). Je suis passionné par la création d&apos;applications web modernes et scalables.
                   </p>
                 </div>
                 <div>
