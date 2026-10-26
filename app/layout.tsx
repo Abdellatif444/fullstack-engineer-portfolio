@@ -7,7 +7,6 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { cn } from "@/lib/utils";
 import { CursorGlow } from "@/components/ui/cursor-glow";
 import { PerformanceMonitor } from "@/components/ui/performance-monitor";
-import SplashScreen from "@/components/ui/splash-screen";
 import PageTransition from "@/components/ui/page-transition";
 
 const fontSans = FontSans({
@@ -76,7 +75,6 @@ export default function RootLayout({
           enableSystem={false}
           disableTransitionOnChange
         >
-          <SplashScreen />
           <Header />
           <PageTransition>
             <main className="min-h-screen">

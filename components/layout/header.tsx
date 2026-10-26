@@ -33,9 +33,8 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    // Show header after splash screen (approximately 6 seconds)
-    const timer = setTimeout(() => setIsVisible(true), 6000);
-    return () => clearTimeout(timer);
+    // Intro animée retirée le 26/10/2026 (voir archive/intro-splash) : le menu s'affiche tout de suite
+    setIsVisible(true);
   }, []);
 
   const isActive = (href: string) => {
