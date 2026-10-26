@@ -14,3 +14,4 @@ Pour remettre l'intro :
 2. replacer le GIF dans `public/` ;
 3. dans `app/layout.tsx`, remettre `import SplashScreen from "@/components/ui/splash-screen";` et `<SplashScreen />` avant `<Header />` ;
 4. dans `components/layout/header.tsx`, remettre le délai de 6 s (`setTimeout(() => setIsVisible(true), 6000)`).
+5. dans `components/ui/page-transition.tsx`, remettre l'attente d'environ 7,5 s avant d'afficher la page (retirée le 26/10/2026 : elle était calée sur l'intro et laissait la page vide après son retrait).
